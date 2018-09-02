@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFF</title>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="branding">
+                <a href="javascript://">
+                    <clr-icon shape="user"></clr-icon>
+                    <span class="title">IFF</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="content-container">
+            <div class="content-area">
+                <div class="center">
+                    <h2 class="aligned-center">Welcome to Infofabrica Hub. Please vote for your favorite cloud provider!</h2>
+                    <h2 class="aligned-center">For cloud comparisons, <a href="https://www.rightscale.com/cloud-comparison-tool/?campaign=7010g0000016IIMhttps:%2F%2Fwww.rightscale.com%2Fcloud-comparison-tool%2F%3Fcampaign%3D7010g0000016IIM&utm_content=011718%20blog%20text%20link" target="_blank"><b>click here.</b></a></h2>					
+<!--                    <p class="aligned-center">The only hub for cloud recommendations. We will take care of your journey!</p> -->
+
+                    <div class="separator"></div>
+
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <clr-icon shape="cloud" dir="up" class="-color6" size="24" style="color: #d20059; width: 24px; height: 24px;"></clr-icon> AWS
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="https://aws.amazon.com/" target="_blank"><b>Powering Customer Innovation</b>, Engineered for the Most Demanding Requirements!</a>
+                                    </li>
+                                </ul>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary" (click)='vote("aws")'>Vote</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <clr-icon shape="cloud" dir="up" class="-color6" size="24" style="color: #d20059; width: 24px; height: 24px;"></clr-icon> Azure
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="https://azure.microsoft.com/" target="_blank"><b>Your vision</b>, Your cloud!</a>
+                                    </li>
+                                </ul>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary" (click)='vote("azure")'>Vote</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <clr-icon shape="cloud" dir="up" class="-color6" size="24" style="color: #d20059; width: 24px; height: 24px;"></clr-icon> Google
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="https://cloud.google.com/" target="_blank"><b>One Cloud</b>, endless possibilities!</a>
+                                    </li>
+                                </ul>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary" (click)='vote("google")'>Vote</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <clr-icon shape="cloud" dir="up" class="-color6" size="24" style="color: #d20059; width: 24px; height: 24px;"></clr-icon> IBM Cloud
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="https://www.ibm.com/cloud/" target="_blank"><b>This is not just any cloud</b>, This is the IBM Cloud.</a>
+                                    </li>
+                                </ul>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary" (click)='vote("ibmcloud")'>Vote</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="spacer"></div>
+ 
+
+<div class="row flex-items-xs-middle">
+    <div class="col-xs">
+    </div>
+    <div class="col-xs">
+        <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" [results]="votes" [gradient]="gradient">
+        </ngx-charts-advanced-pie-chart>
+    </div>
+    <div class="col-xs">
+    </div>
+</div>
+
+
+
+              <div class="row flex-items-xs-middle">
+
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                            <div class="card">
+                                
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a target="_blank">Number of page views so far: <b><u>{{stats.pageviews}}</u></b></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a target="_blank">System serving the request: <b><u>{{stats.hostname}}</u></b></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+              </div>          
+
+                    <div class="spacer"></div>
+
+<!--
+                    <div class="label label-blue label-success">
+                        Number of page views
+                        <span class="badge"><%= @pageviews %></span>
+                    </div>
+
+                    <div class="label label-orange label-success">
+                        Container hostname
+                        <span class="badge"><%= @hostname %></span>
+                    </div>
+-->
+
+                    <div class="separator"></div>
+
+                    <div class="row">
+
+                        <div style="width: 100%; margin-left: 0px; margin-right: 0px;">
+                            <h3 class="aligned-left" style="display: block;">Common Cloud Experiences Patterns and Libraries</h3>
+                        </div>
+
+
+                        <div class="col-sm-12 col-md-6 col-xl-3">
+                                <a href="http://clarity.design" class="card clickable" target="_blank">
+                                    <div class="card-block">
+                                        <p class="card-text">
+                                            <img src="https://vmware.github.io/clarity/clarity_logo.21dda15557a6ebf26fce.svg" style="width: 24px; margin-right: 12px;">Clarity Design System
+                                        </p>
+                                    </div>
+                                </a>
+                        </div>
+
+                        
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
